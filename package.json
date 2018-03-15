@@ -1,0 +1,19 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "A weather app that communicates with third part api's like Google API and a weather API  and uses asynchronous code to fetch data from these sources",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mojaray2k/weather-app.git"
+  },
+  "author": "Amen Ra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mojaray2k/weather-app/issues"
+  },
+  "homepage": "https://github.com/mojaray2k/weather-app#readme"
+}
