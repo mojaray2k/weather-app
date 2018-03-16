@@ -1,6 +1,6 @@
 const request = require('request');
 
-var geocodeAddress = (address) => {
+var geocodeAddress = (address,callback) => {
     var encodedAddress = encodeURIComponent(address);
 
     request({
@@ -14,9 +14,11 @@ var geocodeAddress = (address) => {
         } else if (body.status === 'OVER_QUERY_LIMIT') {
             console.log('Restart your terminal or pres ctr+shift+r in your web browser')
         } else if (body.status === 'OK') {
-            console.log(`Address: ${body.results[0].formatted_address}`);
-            console.log(`Latitude: ${body.results[0].geometry.location.lat}`);
-            console.log(`Longitude: ${body.results[0].geometry.location.lng}`);
+            callback(undefined, {
+                address: body.results[0].formatted_address,
+                latitude: body.results[0].geometry.location.lat,
+                longitude: body.results[0].geometry.location.lng
+            });
         }
     });
 }
