@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/mojaray2k/weather-app/issues"
   },
-  "homepage": "https://github.com/mojaray2k/weather-app#readme"
+  "homepage": "https://github.com/mojaray2k/weather-app#readme",
+  "dependencies": {
+    "request": "^2.73.0"
+  }
 }
